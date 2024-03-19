@@ -14,4 +14,19 @@ export const CURRENCIES = [
 		label: 'Super Credits',
 		abbr: 'SC',
 	},
+	{
+		id: 'common_samples',
+		label: 'Common Samples',
+		abbr: 'CS',
+	},
+	{
+		id: 'rare_samples',
+		label: 'Rare Samples',
+		abbr: 'RS',
+	},
+	{
+		id: 'super_samples',
+		label: 'Super Samples',
+		abbr: 'SS',
+	},
 ]
