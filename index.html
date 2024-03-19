@@ -41,12 +41,13 @@
 	<p>To make it easier to compare the changes, each row has the new image, followed by the current <code>master</code> image.</p>
 </main>
 <script type="module">
-	import { GROUP_LIST, ICON_LIST } from './icons.mjs';
+	import { GROUPS } from './mjs/groups.mjs';
+	import { ICONS } from './mjs/icons.mjs';
 
-	GROUP_LIST.forEach(groupItem => {
+	GROUPS.forEach(groupItem => {
 		let sectionIconList = '';
 
-		ICON_LIST
+		ICONS
 			.filter(item => {
 				return item.group_id === groupItem.id;
 			})
