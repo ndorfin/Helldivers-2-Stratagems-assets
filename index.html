@@ -30,6 +30,7 @@
 	td {
 		padding: 0.25rem;
 	}
+
 	.amount {
 		font-variant-numeric: tabular-nums;
 		text-align: end;
@@ -41,19 +42,40 @@
 	}
 
 	thead th {
-		border-block-end: 2px solid hsla(0,0%,0%,0.2);
+		border-block-end: 2px solid hsla(0, 0%, 0%, 0.2);
 		vertical-align: bottom;
 	}
 
 	tbody tr:nth-child(odd) {
-		background-color: hsla(0,0%,0%,0.05);
+		background-color: hsla(0, 0%, 0%, 0.05);
 	}
 
-	table img {
+	img {
+		background-color: black;
+		vertical-align: middle;
+	}
+
+	aside dd {
+		margin-inline-start: 0;
+	}
+
+	aside svg {
+		block-size: 64px;
+		inline-size: 64px;
 		background-color: black;
 		vertical-align: middle;
 	}
 </style>
+<div style="display: none">
+	<style>
+		.mask_outline {
+			fill: #000;
+			stroke: #000;
+			stroke-width: 8;
+		}
+	</style>
+	<load-file replaceWith src="./icons/sprite.svg"></load-file>
+</div>
 <main>
 	<header>
 		<h1>List of Stratagems</h1>
@@ -1820,8 +1842,1019 @@
 <!-- <script defer type="module" src="./mjs/generate_table.mjs"></script> -->
 <aside>
 	<header>
-		<h2>Inline sprite</h2>
+		<h2>Inline sprite use</h2>
 	</header>
-	<load-file replaceWith src="./icons/sprite.svg"></load-file>
+	<dl>
+		<div>
+			<dt>terrain</dt>
+			<dd>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+					<use href="#terrain"/>
+				</svg>
+			</dd>
+		</div>
+		<div>
+			<dt>mgr</dt>
+			<dd>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+					<use href="#mgr"/>
+				</svg>
+			</dd>
+		</div>
+		<div>
+			<dt>planet</dt>
+			<dd>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+					<use href="#planet"/>
+				</svg>
+			</dd>
+		</div>
+		<div>
+			<dt>sentry</dt>
+			<dd>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+					<use href="#sentry"/>
+				</svg>
+			</dd>
+		</div>
+		<div>
+			<dt>backpack</dt>
+			<dd>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+					<use href="#backpack"/>
+				</svg>
+			</dd>
+		</div>
+
+
+
+			<div>
+				<dt>anti-materiel_rifle</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill-rule="evenodd" fill="#49adc9" d="M29 85v-4h20v3l-2 1h-3v2h6l1 1h1v-2h9l2 2h11l2 2h30v-2h15v7h-15v-2H76v3h-3v-1h-2v11h2v2h-6v-2h2V96l-2-2h-2l-1 1H54l-1 1h-3v5h-2v-4H38v2l-3-1h-2l-5 3v4h-4l-1-3 4-4v-2l-1-2h-8l-1 2v1l-1 2h-5l-4 3H4V90l3-2h20l1-1h6v-2h-5ZM7 98v-5h8v1l-5 4H7Zm26-2h2v1h-2v-1Z">
+						</path>
+						<path d="M60 17h4v50h-4z"/>
+						<path d="M37 40h51v4H37z"/>
+						<path fill-rule="evenodd" d="M62 22a20 20 0 1 1-20 20 20 20 0 0 1 20-20Zm0 5a15 15 0 1 1-15 15 15 15 0 0 1 15-15Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/anti-materiel_rifle.svg" alt="APW-1 Anti-Materiel Rifle">
+				</dd>
+			</div>
+
+			<div>
+				<dt>anti-personnel_minefield</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="M29 93V82h68v11l-13 6-21-10-21 10Z"/>
+						<path d="M38 69h50v9H38zM58 60h10v5H58z"/>
+						<use href="#terrain"/>
+					</svg>
+					<img width="64" height="64" src="./icons/anti-personnel_minefield.svg" alt="MD-6 Anti-Personnel Minefield">
+				</dd>
+			</div>
+
+			<div>
+				<dt>arc_thrower</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="m12 39 2 3 36-7 3 16 18-16 2 12 41-5v-3l-38 4-3-16-17 16-2-12Z"/>
+						<path fill="#49adc9"
+							d="M120 80h-4l-3 3v4l-1 1h-2l-2-2h-7l-1 1h-1v-1h-2l-1 2h-1v-2h-2l-1 2h-1v-2h-2l-1 2h-1v-2h-6v11h-5V86h-8v2h-4l-13 20h-4l-9-5v-4l4-5v-4l-1-2h-6v-2H21L11 97H6l-1-1V75h6v-1h19v1h3v-1h5l6-7h4l1-1h7l1 1h6l3 3v3h6l1 1h37l1-1h1l2 3h7v3Zm-76 24 1 1h4l6-8v-2h-7l-4 6v3Zm6-35h-4l-4 3v1h6l2-3v-1Zm2 21v3h5v-3h-5Zm14-16-4-5h-6v2h4l4 4h2v-1Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/arc_thrower.svg" alt="ARC-3 Arc Thrower">
+				</dd>
+			</div>
+
+			<div>
+				<dt>autocannon</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9"
+							d="M27 82v-7h19v7h49v2h7v-2h2s3 1.3 3 3h10v-1h4v6h-4v-1h-10s-1 3-3 3h-2v-2h-7v2h-6l-2 2h-9s.2 1.6-2 4h-2v-4H60v3h-2s-3 4.5-3 9a7.3 7.3 0 0 1-5-3s.6-4.2 3-6v-3h-7a19 19 0 0 1-12 9s1.2-10.4-10-11c-5.4-.3-8 5-8 5h-2v-1H6v-6s-2 .3-2-3a6.2 6.2 0 0 1 3-5h20Z">
+						</path>
+						<path d="M34 33h36L48 55H34V33Zm42 0L54 55h33s11-.6 11-11-11-11-11-11H76Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/autocannon.svg" alt="AC-8 Autocannon">
+				</dd>
+			</div>
+
+			<div>
+				<dt>autocannon_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H51.5a9 9 0 0 0-6-6.1c3.1-1.2 6.5-3.7 6.5-8.8a9 9 0 0 0-6.5-9.2c3.1-1.2 6.5-3.7 6.5-8.8C52 27.5 40 28 40 28h-9V18h22s39 0 39 39ZM51.8 76H85v16H41v-8c2.6-.3 9.6-1.6 10.8-8ZM93 96l13 16H18l13-16h62Z">
+						</path>
+						<path d="M9 67h21L16 81H9V67Zm26 0L22 81h20s7-1.3 7-7-6-7-6-7h-8Z"/>
+						<path d="M9 49h21L16 63H9V49Zm26 0L22 63h20s7-1.3 7-7-6-7-6-7h-8Z"/>
+						<path d="M9 31h21L16 45H9V31Zm26 0L22 45h20s7-1.3 7-7-6-7-6-7h-8Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/autocannon_sentry.svg" alt="A/AC-8 Autocannon Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>ballistic_shield_backpack</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#49adc9">
+							<path d="M79 41h9v10h-9z"/>
+							<path d="M75 41H64l-10-9v14l11 4v48h39l9-9V32l-10 9H92v14H75V41Z"/>
+							<path d="m54 27 11 10h37l11-10V16H54v11Z"/>
+						</g>
+						<path
+							d="M8 99s24 16 26 16 26-16 26-16V53s-22-6-26-6-26 6-26 6v46Zm34-37a3.5 3.5 0 0 1 2-1h2s2 0 2 1v2a3.6 3.6 0 0 1-2 1h-2s-2 0-2-1v-2Zm0 6h6v21s-1 4-3 4-3-4-3-4V68Zm-11-6a3.5 3.5 0 0 1 2-1h2s2 0 2 1v2a3.6 3.6 0 0 1-2 1h-2s-2 0-2-1v-2Zm0 6h6v21s-1 4-3 4-3-4-3-4V68Zm-11-6a3.5 3.5 0 0 1 2-1h2s2 0 2 1v2a3.6 3.6 0 0 1-2 1h-2s-2 0-2-1v-2Zm0 6h6v21s-1 4-3 4-3-4-3-4V68Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/ballistic_shield_backpack.svg" alt="SH-20 Ballistic Shield Backpack">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_110mm_rocket_pods</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m9 47 29-8 9-29 7 7v38H16Z"/>
+							<path
+								d="M82 25v4l-8.4-7.4L78 10l17 10v17.2Zm-7 37 8 1 12 12v8l17 17 1 14-15-2-16-17h-6.3L63 83v-8L50 63.4l9-3.4 3.9-10.1ZM19 95 9 79l12.9-4.9L30 83h-4l11.3 12H19Z">
+							</path>
+						</g>
+						<path d="M50 69v17H33l8 8h8l11 12h11V96L59 85v-8Z"/>
+						<path d="m43 80-6-6h-9l5 6h10ZM38 63v9l6 6V68ZM63 38l6 7h9l-6-7h-9ZM74 37l6 6V33l-6-5v9Z"/>
+						<path d="M69 50h17V34l8 8v7l12 12v10H96L85 59h-8Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_110mm_rocket_pods.svg" alt="Eagle 110MM Rocket Pods">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_500kg_bomb</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m44 20 3-10 7 7v13ZM31 55H16l-7-8 11.5-3.2Z"/>
+							<path d="M98 112 82 95H19L9 79l33.3-12.7L63 87h24V63L65.9 41.9 78 10l17 10v63l17 17 1 14Z"/>
+						</g>
+						<path d="M46 55v10l19 18h18V64L65 46H54V35L42 24l-3 14-14 5 11 12h10Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_500kg_bomb.svg" alt="Eagle 500KG Bomb">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_airstrike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m9 47 29-8 9-29 7 7v38H16Z"/>
+							<path
+								d="m113 114-15-2-16-17H19L9 79l50-19 19-50 17 10v63l17 17ZM34 83l-2 6 4 5 3 1h31l-9-10h-7v-6l-4-5h-8v9h-8Zm61-47-4-4h-8v9h-7l-2 6 6 6h6v5l9 11V36Z">
+							</path>
+						</g>
+						<path
+							d="M36 86h9v-9h3l3 3v8h8l7 8v11H54l-7-8v-7h-8l-3-3v-3ZM86 44v-9h4l3 4v7h7l8 8v12H96l-7-9v-7h-8l-3-3v-3h8Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_airstrike.svg" alt="Eagle Airstrike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_cluster_bomb</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m9 47 29-8 9-29 7 7v38H16Z"/>
+							<path
+								d="M98 112 82 95H72a10 10 0 0 0-19-4.3 10 10 0 0 0-18 0 10 10 0 0 0-18.3.6L9 79l50-19 19-50 12.5 7.3A10 10 0 0 0 88.7 36a10 10 0 0 0 0 18A10 10 0 0 0 95 72.8V83l17 17 1 14Z">
+							</path>
+						</g>
+						<circle cx="26" cy="95" r="8"></circle>
+						<circle cx="44" cy="95" r="8"></circle>
+						<circle cx="62" cy="95" r="8"></circle>
+						<circle cx="93" cy="63" r="8"></circle>
+						<circle cx="93" cy="45" r="8"></circle>
+						<circle cx="93" cy="27" r="8"></circle>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_cluster_bomb.svg" alt="Eagle Cluster Bomb">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_napalm_airstrike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m9 47 29-8 9-29 7 7v38H16Z"/>
+							<path
+								d="M98 112 82 95H63.3l.7-19-13-8H38l21-8 7.4-19.6L69 43v11l9 9h17v20l17 17 1 14Zm-7-84H71.2L78 10l17 10v10.3ZM9 79l12.2-4.6L29 83v12H19Z">
+							</path>
+						</g>
+						<path
+							d="M24 72h18l3 4v-4l5 1 9 4v18l-5-4v-6h-6l-2-2h-3v11h8l4 6H40l-7-7V81ZM65 31l17 1 3 4 1-4h4l9 5v18l-5-5v-5h-6l-1-2h-4v11h8l5 5H80l-6-6-1-12Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_napalm_airstrike.svg" alt="Eagle Napalm Airstrike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_rearm</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="m9 47 29-8 9-29 7 7v38H16Z"/>
+						<path fill="#c9b269"
+							d="M89.3 49.1a31 31 0 0 0-27 2.2L78 10l17 10v20.5ZM19 95 9 79l41.8-15.9A31 31 0 0 0 52.1 95H19Zm86-2 7 7 1 14-15-2-6-6.4a31.1 31.1 0 0 0 13-12.5Z">
+						</path>
+						<path
+							d="M99 77h6s-.5 28-27 28c-26 0-27-27-27-27s-1-26.8 27-27c0 0 7.6-.6 13 3l5-7 9 20H84l4-7s-15.2-9-26 5-1 27.6 6 31 26.5 8.5 31-19Z">
+						</path>
+						<path fill="#c9b269" d="m76 70 17.3.7a17 17 0 1 1-10.8-9Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_rearm.svg" alt="Eagle Rearm">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_smoke_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path
+								d="M51 32s-7.3-1.5-11.7 3L47 10l7 7v6.5c-1.9 1.6-3.2 4.2-3 8.5ZM36 45s-9.1-.2-12.6 10H16l-7-8 27.7-7.6A18 18 0 0 0 36 45Z">
+							</path>
+							<path
+								d="M86 32s1.4-11.6-12-11h-.2L78 10l17 10v13a19 19 0 0 0-9-1ZM36 72s-2.2 14.3 15 13a10.5 10.5 0 0 0 4.7 10H19L9 79l22-8.4a47.4 47.4 0 0 0 5 1.4Zm50 13a46.6 46.6 0 0 0 10.5-.5L112 100l1 14-15-2-16-17h-1.5A11.9 11.9 0 0 0 86 85Z">
+							</path>
+						</g>
+						<path
+							d="M100.8 68H90.6a6.2 6.2 0 0 1 6.2 6.6 6 6 0 0 1-6.2 6.3H76.4a5.2 5.2 0 0 1 5 5.6 5 5 0 0 1-5 5.4h-8.2v.1H60a5 5 0 0 1-5-5.4 5.1 5.1 0 0 1 5-5.6H46s-6 .2-6-6.4 6-6.6 6-6.6H36s-9-.1-9-9.4 9-9.6 9-9.6h10a6 6 0 0 1-6-6.4 6.4 6.4 0 0 1 6-6.6h13.2a4.5 4.5 0 0 0 .8 0h-.8c-1.5-.1-4.2-1-4.2-5.4 0-6 5-5.6 5-5.6h16.4s5-.5 5 5.6c0 4.5-2.7 5.3-4.2 5.4h-.8a4.7 4.7 0 0 0 .8 0h13.4s6.2.3 6.2 6.6-6.2 6.4-6.2 6.4h10.2s9.2.3 9.2 9.6-9.2 9.4-9.2 9.4Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_smoke_strike.svg" alt="Eagle Smoke Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>eagle_strafing_run</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#de7b6c">
+							<path d="m9 47 29-8 9-29 7 7v38H16Z"/>
+							<path
+								d="M75.8 15.7 78 10l17 10v14.5Zm-9.6 25.5L95 70v13l17 17 1 14-15-2-16-17H71L42.3 66.3 59 60ZM9 79l7.2-2.8L35 95H19Z">
+							</path>
+						</g>
+						<path d="m14 69 5-5 15 15-5 5Z"/>
+						<path d="m30 85 5-5 15 15-5 5Z"/>
+						<path d="m33 73 5-5 15 15-5 5Z"/>
+						<path d="m49 89 5-5 15 15-5 5Z"/>
+						<path d="m64 19 5-5 15 15-5 5Z"/>
+						<path d="m80 35 5-5 15 15-5 5Z"/>
+						<path d="m68 38 5-5 15 15-5 5Z"/>
+						<path d="m84 54 5-5 15 15-5 5Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/eagle_strafing_run.svg" alt="Eagle Strafing Run">
+				</dd>
+			</div>
+
+			<div>
+				<dt>ems_mortar_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H44s9-22.4 9-28-9-25-9-25h9s39 0 39 39Zm-7 35H50v-8l-6-6v-2h41v16Zm-47 9h12v-5h43l13 16H18l9-11h11Z">
+						</path>
+						<path d="m17 50 5-20L2 56l14-1-4 20 20-26Z"/>
+						<path
+							d="M40 69v11l6 6v11H27V86l6-6V69s-2-4.3-4-9.5L38 46H24.5l-.3-1.1 1.8-10c2.7-7.5 7-16.9 7-16.9h7s9 19.4 9 25-9 26-9 26Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/ems_mortar_sentry.svg" alt="A/M-23 EMS Mortar Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>expendable_anti-tank</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9"
+							d="M4 95v-9l6-5v-5h14l3-3h2v5h6l3 1 1 2h23l4-3h29v2l4 1 1 3h19l2 2v17l-2 2H97v1h-5v-1H68v1h-2v-1H53v1H27v-1H6l-2-2v-8Z">
+						</path>
+						<path
+							d="M80 52c-8.3 0-28-7-28-7h-7l-4 7H26l4-9h-5l-3 9h-8l5-12v-1l-5-12h8l3 9h5l-4-9h15l4 7h7s19.7-7 28-7 32 7 32 7v11s-23.7 7-32 7Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/expendable_anti-tank.svg" alt="EAT-17 Expendable Anti-Tank">
+				</dd>
+			</div>
+
+			<div>
+				<dt>flamethrower</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="M62 65v-9l-3-4 6-10 1 2 1 3 5 5-4 5v8l15-14s0-6.1-5-18a52.4 52.4 0 0 0-5 7V28L60 15l-2 16-9 9v14Z">
+						</path>
+						<path fill="#49adc9"
+							d="M81 92v1h3v4l-4 4h-4v3l-12 9h-7l-5-7v-6l-7-10H29l-4 5H9l-5-4v-8h18l2-2h18v-2h8v2h4v-2h20v2h9v2h30l2 1h3v2h-1l-2 1v3h3v-3l2 1h1v4H81Zm-58-5h-7l-1 2h-1l-1-2h-3v6h11l2-2v-4Zm43 5-4-4H50v3l7 8h2l7-4v-3Zm46-4H81v2h31v-2Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/flamethrower.svg" alt="FLAM-40 Flamethrower">
+				</dd>
+			</div>
+
+			<div>
+				<dt>gatling_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H51.5l-.5-1-1-1h-4l-1-1h-9v-2h9l1-1h4l1-1 1-2 1-1v-1l-1-1-1-2-1-1h-4l-1-1h-9v-3h9l1-1h4l1-1 1-2 1-1v-1l-1-1-1-2-1-1h-4l-1-1h-9v-2h9l1-1h4l1-1 1-2 1-1v-1l-1-1-1-2-1-1h-4l-1-1h-9v-1h-5v-9h22s39 0 39 39ZM52 85l-1-2-1-1h-4l-1-1h-4v-2h4l1-1h4l1-1 .5-1H85v16H45l1-1h4l1-1 1-2 1-1v-1Zm41 11 13 16H18l13-16h62Z">
+						</path>
+						<path d="M9 90h26l1-1h8l1-1h3l1-1v-1l-1-1h-3l-1-1h-8l-1-1H9v7Z"/>
+						<path d="M9 77h26l1-1h8l1-1h3l1-1v-1l-1-1h-3l-1-1h-8l-1-1H9v7Z"/>
+						<path d="M9 64h26l1-1h8l1-1h3l1-1v-1l-1-1h-3l-1-1h-8l-1-1H9v7Z"/>
+						<path d="M9 50h26l1-1h8l1-1h3l1-1v-1l-1-1h-3l-1-1h-8l-1-1H9v7Z"/>
+						<path d="M9 37h26l1-1h8l1-1h3l1-1v-1l-1-1h-3l-1-1h-8l-1-1H9v7Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/gatling_sentry.svg" alt="A/G-16 Gatling Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>grenade_launcher</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="M27 28h10v3h21v23H37v3H27V28Zm37 3v23h25s11 0 11-11v-1s.8-11-11-11H64Z"/>
+						<path fill="#49adc9"
+							d="M25 77v-2h9l1-3h6v1h4v-1h2v2h3v-2h4v2h35v-2h7v1h3v-1h7l2 2h3l1 1h5v4h-2v5l2 2h4v5h-3l-2 2h-8l-1 1H95v11h-7V94h-3l-1-1H72v7l-2 2h-3l-1 1H55l-6 11h-6l-2-2v-3l8-10v-3l-2-2H37l-5-3v-3h-7v-2H15v17l-3 2H7l-2-2V74l2-2h5l3 2v3h10Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/grenade_launcher.svg" alt="GL-21 Grenade Launcher">
+				</dd>
+			</div>
+
+			<div>
+				<dt>guard_dog</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<mask id="mask_guard_dog_contents">
+							<use href="#mask_fill"/>
+							<use href="#guard_dog_contents" class="mask_outline"/>
+						</mask>
+						<use href="#backpack" mask="url(#mask_guard_dog_contents)"/>
+						<use href="#guard_dog_contents"/>
+					</svg>
+					<img width="64" height="64" src="./icons/guard_dog.svg" alt="AX/AR-23 Guard Dog">
+				</dd>
+			</div>
+
+			<div>
+				<dt>guard_dog_rover</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<mask id="mask_guard_dog_rover_contents">
+							<use href="#mask_fill"/>
+							<use href="#guard_dog_rover_contents" class="mask_outline"/>
+						</mask>
+						<use href="#backpack" mask="url(#mask_guard_dog_rover_contents)"/>
+						<use href="#guard_dog_rover_contents"/>
+					</svg>
+					<img width="64" height="64" src="./icons/guard_dog_rover.svg" alt="AX/LAS-5 Guard Dog Rover">
+				</dd>
+			</div>
+
+			<div>
+				<dt>hellbomb</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path
+							d="M63 109H34L21 95l15 2-2-12 11 11V76l14 13s2.5-21.5 3-30c.4-6.6-4-14-4-14l-11 1c-2.3.2-9.1-1-9-9s8-6 8-6 1.2-7 11-5c0 0-.9-5 6-5v88Zm0 0h29l13-14-15 2 2-12-11 11V76L67 89s-2.5-21.5-3-30c-.4-6.6 4-14 4-14l12 1c2.3.2 8.1-1 8-9s-8-6-8-6-1.2-7-11-5c0 0 .9-5-6-5v88Z">
+						</path>
+						<path fill-rule="evenodd"
+							d="M63 53c16.6 0 30 3.6 30 8s-13.4 8-30 8-30-3.6-30-8 13.4-8 30-8Zm0 4c12.2 0 22 1.8 22 4s-9.8 4-22 4-22-1.8-22-4 9.9-4 22-4Z">
+						</path>
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/hellbomb.svg" alt="NUX-223 Hellbomb">
+				</dd>
+			</div>
+
+			<div>
+				<dt>hmg_emplacement</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<mask id="mask_hmg_emplacement_contents">
+							<use href="#mask_fill"/>
+							<use href="#hmg_emplacement_contents" class="mask_outline"/>
+						</mask>
+						<g mask="url(#mask_hmg_emplacement_contents)">
+							<use href="#sentry" transform="translate(25, -2) scale(0.825, 1)"/>
+						</g>
+						<use href="#hmg_emplacement_contents"/>
+					</svg>
+					<img width="64" height="64" src="./icons/hmg_emplacement.svg" alt="E/MG-101 HMG Emplacement">
+				</dd>
+			</div>
+
+			<div>
+				<dt>incendiary_mines</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#terrain"/>
+						<path d="M29 93V82h68v11l-13 6-21-10-21 10Z"/>
+						<path
+							d="M58 78 46 66V54l9-8 4-15 10 14v7l4-4 10 12-18 18v-8l4-4-6-3v-8l-7 10 3 4v9h-1ZM52 78H38v-9h5Zm28-9h8v9H71Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/incendiary_mines.svg" alt="MD-I4 Incendiary Mines">
+				</dd>
+			</div>
+
+			<div>
+				<dt>jump_pack</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9" d="M31 83V59L18 83h13Z"/>
+						<path
+							d="m35 87 2 25h5V87h-7ZM45 87v25h5l2-25h-7ZM76 87l2 25h5V87h-7ZM86 87v25h5l2-25h-7ZM35 83V33h17v50H35Z">
+						</path>
+						<path d="M76 33h17v50H76z"/>
+						<path fill="#49adc9" d="M97 83h13L97 59v24ZM56 83V29H35V16h58v13H72v54H56Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/jump_pack.svg" alt="LIFT-850 Jump Pack">
+				</dd>
+			</div>
+
+			<div>
+				<dt>laser_cannon</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9"
+							d="M118 95h-17v2h-4v6l-5 5h-5l-1 6v1h-6l-8-3-1-2 4-5v-3H64l-2-2v-3h-3l-2 3v6h-1v6h-7v-6l-7-8h-5v-4h-3v2h-7v-2H14l-2 3H8v-3H5V79h3v-3h4l2 3h13v-3h7v3h5V68h3v4h22v4h2v-7h3v9h6l4 3h23v-1h4v-3h2v3h2v-3h2v3h2v-3h2v3h3v-2h2v15Zm-64 5h-1v5h1v-5Zm0 6h-1v5h1v-5Zm24 2v4h6v-7h-3Zm11-7h-5v3h5v-3Z">
+						</path>
+						<path
+							d="M94 38v-4h10v4H94Zm-5-12.8 7.1-7.1 2.8 2.8-7 7.1ZM81 46a10 10 0 0 1-9.5-7H23v-6h48.5A10 10 0 1 1 81 46Zm-2-33h4v10h-4V13Zm-16 7.9 2.9-3 7.1 7.2-2.9 3Zm10 26L66 54 63 51.1l7.2-7.1ZM83 59h-4V49h4v10Zm16-8L96.2 54l-7.1-7 2.8-2.9Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/laser_cannon.svg" alt="LAS-98 Laser Cannon">
+				</dd>
+			</div>
+
+			<div>
+				<dt>machine_gun</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9"
+							d="M121 85v3H67v6h-3v16H53V93h-8a50.6 50.6 0 0 0-1 9s-2 2.5-7-1c0 0-1-2.9 3-8v-3l-2-2H16v2h1v2l-1 1h-3l-3-3H8l-1 3H4V78h8l2 3h5l1-1h7l4-2h16v-1h18v1h4v2h52v2h-2v3h2Zm-69 4h-6v3h6v-3Z">
+						</path>
+						<path d="M90 63H79v2H40V53h39v2h11s4 3 4 4-4 4-4 4ZM31 53h5v12h-5V53Z"/>
+						<path d="M90 46H79v2H40V36h39v2h11s4 3 4 4-4 4-4 4ZM31 36h5v12h-5V36Z"/>
+						<path d="M90 29H79v2H40V19h39v2h11s4 3 4 4-4 4-4 4ZM31 19h5v12h-5V19Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/machine_gun.svg" alt="MG-43 Machine Gun">
+				</dd>
+			</div>
+
+			<div>
+				<dt>machine_gun_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H31v-3h7l1-1 7-1 1-1h3l3-4v-1l-3.1-4H47l-1-1-7-1h-5v-1h5l7-1 1-1h3l3-4v-1l-3-4h-3l-1-1-6-1h-6l12-1 1-1h3l3-4v-1l-3-4h-3l-1-1-10-1h-5v-9h22s39 0 39 39Zm-7 19v16H41V76h44Zm8 20 13 16H18l13-16h62Z">
+						</path>
+						<path d="M9 57v7h26l1-1h8l1-1h3l1-1.5-1-1.5h-3l-1-1h-8l-1-1H9Z"/>
+						<path d="M9 43v7h26l1-1h8l1-1h3l1-1.5-1-1.5h-3l-1-1h-8l-1-1H9Z"/>
+						<path d="M9 30v7h26l1-1h8l1-1h3l1-1.5-1-1.5h-3l-1-1h-8l-1-1H9Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/machine_gun_sentry.svg" alt="A/MG-43 Machine Gun Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>mortar_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H44s9-22.4 9-28-9-25-9-25h9s39 0 39 39Zm-7 35H50v-8l-6-6v-2h41v16Zm-47 9h12v-5h43l13 16H18l9-11h11Z">
+						</path>
+						<path d="M40 69v11l6 6v11H36V18h4s9 19.4 9 25-9 26-9 26Z"/>
+						<path d="M33 69v11l-6 6v11h10V18h-4s-9 19.4-9 25 9 26 9 26Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/mortar_sentry.svg" alt="A/M-12 Mortar Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_120mm_he_barrage</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99Zm-8-35c2.5-.2 4.7-3.3 6.2-6.8A54 54 0 0 1 107.9 90H93.4L91 85Zm-7.9-11a37.2 37.2 0 0 0-9-6.8 53.7 53.7 0 0 1 8.8 2.6c0 1.4 0 2.8.2 4.1Zm1.9 6.5a8.8 8.8 0 0 0 2.2 3.4 50.1 50.1 0 0 1 3.1 6.1H65v-5.2l1-.8c2.4-1.9 4.7-6.3 4.7-6.3s.3-4 .5-8.5A35 35 0 0 1 85 80.5ZM35.5 93H62v27H31a85.5 85.5 0 0 1 4.5-27ZM56 69v8s3.4 5.2 5 7a8.6 8.6 0 0 0 1 1v5H36.7A38.3 38.3 0 0 1 56 69Zm-11.1.2a53.8 53.8 0 0 1 8.5-2.3 37 37 0 0 0-9.5 7 30.5 30.5 0 0 0 1-4.7ZM18 90a54 54 0 0 1 11.6-12.5C31 81.1 33 84.9 36 85l-2.3 5H18.1Zm10 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM65 93h26.5a85.5 85.5 0 0 1 4.6 27H65V93Zm-2 81a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Z">
+						</path>
+						<path
+							d="m32 75 3 6s1.3 2.3 3 0a28.7 28.7 0 0 0 3-6V59s2-.5 2-2V37H30v20a1.9 1.9 0 0 0 2 2v16Zm-1-47a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H31Z">
+						</path>
+						<path
+							d="m59 75 3 6s1.3 2.3 3 0a28.7 28.7 0 0 0 3-6V59s2-.5 2-2V37H57v20a1.9 1.9 0 0 0 2 2v16Zm-1-47a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H58Z">
+						</path>
+						<path
+							d="m86 75 3 6s1.3 2.3 3 0a28.7 28.7 0 0 0 3-6V59s2-.5 2-2V37H84v20a1.9 1.9 0 0 0 2 2v16Zm-1-47a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H85Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_120mm_he_barrage.svg" alt="Orbital 120MM HE Barrage">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_380mm_he_barrage</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99Zm-3-31V77.3A54 54 0 0 1 107.9 90H95ZM77 72.6V89l1 1H65v-4.6l8-8.4v-7a33.6 33.6 0 0 1 4 2.6ZM35.5 93H62v27H31a85.5 85.5 0 0 1 4.5-27ZM54 70v7l8 8.4V90H36.7A39 39 0 0 1 54 70ZM18.1 90a54 54 0 0 1 17.6-16.5l4.7 4.5a51 51 0 0 0-6.8 12H18.1Zm10 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27Zm36.9 0V93h15.8l5.7 6 5.2-5.5A86 86 0 0 1 96 120H65Z">
+						</path>
+						<path
+							d="m35 68 6.5 7 6.5-7V46s3-.8 3-3V26H32v17.1a3 3 0 0 0 3 2.9v22ZM33 17a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H33Z">
+						</path>
+						<path d="m57 76 6.5 7 6.5-7V54s3-.8 3-3V34H54v17.1a3 3 0 0 0 3 2.9v22Z"/>
+						<path d="M55 25a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H55Z"/>
+						<path d="m80 88 6.5 7 6.5-7V66s3-.8 3-3V46H77v17.1a3 3 0 0 0 3 2.9v22Z"/>
+						<path d="M78 37a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H78Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_380mm_he_barrage.svg" alt="Orbital 380MM HE Barrage">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_airburst_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99ZM86.1 77.4l-3-7.5A54 54 0 0 1 107.9 90H93.4a50.6 50.6 0 0 0-7.2-12.6ZM90.3 90H69V68.3l1 .3L76 84l8.7-3.7a47 47 0 0 1 5.5 9.7Zm-48.1-9.7 8.7 3.7L57 68.6l.9-.3V90H36.7a47 47 0 0 1 5.5-9.7ZM33.6 90H18.1a54 54 0 0 1 26-20.5l-3.3 7.9A50.5 50.5 0 0 0 33.6 90Zm-5.5 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM63 174a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm28.5-81a85.5 85.5 0 0 1 4.6 27H65V93h26.5Zm-56 0H62v27H31a85.5 85.5 0 0 1 4.5-27Z">
+						</path>
+						<path d="M62 49h3v4h-3z"/>
+						<path d="M62 58h3v4h-3z"/>
+						<path d="M62 67h3v4h-3z"/>
+						<path d="M62 76h3v4h-3z"/>
+						<path d="M62 85h3v4h-3z"/>
+						<path d="m56 47.8 2.8 1-1.2 3.8-2.9-1Z"/>
+						<path d="m53.2 56.4 2.8 1-1.2 3.7-2.8-.9Z"/>
+						<path d="m50.4 65 2.9.9-1.2 3.8-2.9-1Z"/>
+						<path d="m47.4 73 2.9.9-1.2 3.8-2.9-1Z"/>
+						<path d="m68.4 48.5 2.9-1 1.3 3.9-2.9 1Z"/>
+						<path d="m71.4 57 2.8-1 1.3 3.9-2.8 1Z"/>
+						<path d="m74.3 65.6 2.8-1 1.3 3.8-2.8 1Z"/>
+						<path d="m76.7 73.8 2.8-1 1.3 3.8-2.8 1Z"/>
+						<path
+							d="M70.8 32.6 76 37l-6.3-.3L71 43l-5-4-2.5 6-2.5-6-5 4 1.3-6.3-6.3.3 5.2-4.4L51 29h6l-1-6 6 4V12h3v15l6-4-1 6h6Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_airburst_strike.svg" alt="Orbital Airburst Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_ems_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99ZM74.1 67.2A54 54 0 0 1 107.9 90H93.4c-5.3-13-13-19.5-19.2-22.8ZM33.6 90H18.1a54 54 0 0 1 35.3-23.1A42.4 42.4 0 0 0 33.6 90Zm-5.5 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM63 174a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm33-54H65V93h26.5a85.5 85.5 0 0 1 4.6 27Zm-5.7-30H65v-3l7.6-17.1c8.7 4.4 14.3 12 17.7 20.1ZM62 120H31a85.5 85.5 0 0 1 4.5-27H62v27Zm0-53v23H36.7A37 37 0 0 1 62 67Z">
+						</path>
+						<path d="m65 79 16-42-16 5V12L49 55l16-5v29Z"/>
+						<path
+							d="m33 65.7 3.2 5A52 52 0 0 0 27 77l-3.7-3.7a41.7 41.7 0 0 1 9.8-7.6ZM47 60.4l2 5.3a54.8 54.8 0 0 0-10.2 3.7l-3-5.1A51 51 0 0 1 47 60.4ZM61 58.9v5.2a54.2 54.2 0 0 0-9 .9l-1.6-5.3A63.9 63.9 0 0 1 61 59Zm18.3 2.2a60.2 60.2 0 0 1 10.9 3.6L87.6 69a51.2 51.2 0 0 0-10.1-3.4l1.2-3.6Zm23.4 12.2L99 77a31.8 31.8 0 0 0-8.8-6.7l3-4.2a35.4 35.4 0 0 1 9.5 7.2Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_ems_strike.svg" alt="Orbital EMS Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_gas_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99Zm-8.3-35.7L97 78a54 54 0 0 1 10.9 12H93.4a55.8 55.8 0 0 0-2.7-5.7ZM29 78l7 6.7a56 56 0 0 0-2.5 5.3H18.1a54 54 0 0 1 11-12Zm-1 42H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM63 174a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm33-54H65V93h.1l8.9 8 8-8h9.5a85.5 85.5 0 0 1 4.6 27ZM35.6 93h9.2l8.3 8 8.9-8h.1v27H31a85.5 85.5 0 0 1 4.5-27Zm1.2-3 1.5-3.3 3.4 3.3h-5Zm52-3.6 1.6 3.6H85Z">
+						</path>
+						<path
+							d="m75.7 79 3 3 7.2-7 5 5-17.2 17-5-5 7-7-3-3-5.1 4H59l-5-4-3 3 7 7-5 5-17-17 5-5 7 7 3-3-18-17V41h7c-.5-23 22-24 22-24h2.5S87.5 18 87 41H94v21Zm-4.2-2a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm0-9a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm-8 14a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm0-9a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm0-10a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm-8 14a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5Zm0-9a2.5 2.5 0 1 0-2.5-2.5 2.5 2.5 0 0 0 2.5 2.5ZM82 41H45v14l8 6 9-7h2.6l9.2 7 8.2-6V41Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_gas_strike.svg" alt="Orbital Gas Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_gatling_barrage</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99ZM79 70.3v-1.8A54 54 0 0 1 107.9 90H93.4c-4-9.8-9.4-15.9-14.4-19.7ZM57 90H36.7A42 42 0 0 1 48 74.1V84h9v6Zm-23.4 0H18.1A54 54 0 0 1 48 68.2v2A45 45 0 0 0 33.6 90Zm-5.5 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM63 174a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm33-54H65V93h26.5a85.5 85.5 0 0 1 4.6 27ZM35.6 93H62v27H31a85.5 85.5 0 0 1 4.5-27Zm54.8-3H70v-6h9V74a42 42 0 0 1 11.3 16Z">
+						</path>
+						<path d="M53 24h3v15h-3z"/>
+						<path d="M53 44h3v15h-3z"/>
+						<path d="M53 64h3v15h-3z"/>
+						<path d="M62 15h3v13h-3z"/>
+						<path d="M62 31h3v15h-3z"/>
+						<path d="M62 51h3v16h-3z"/>
+						<path d="M62 71h3v16h-3z"/>
+						<path d="M71 24h3v15h-3z"/>
+						<path d="M71 44h3v15h-3z"/>
+						<path d="M71 64h3v15h-3z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_gatling_barrage.svg" alt="Orbital Gatling Barrage">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_illumination_flare</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<circle cx="63" cy="63" r="12"></circle>
+						<path d="m43.8 84.7-.7-.7-1.4-1.4-.7-.7 9.2-9.2.7.7 1.4 1.4.7.7Z"/>
+						<path d="m85 82.2-.7.7-1.4 1.4-.7.7-9.2-9.2.7-.7 1.4-1.4.7-.7Z"/>
+						<path d="m43.8 41.3-.7.7-1.4 1.4-.7.7 9.2 9.2.7-.7 1.4-1.4.7-.7Z"/>
+						<path d="m85 43.8-.7-.7-1.4-1.4-.7-.7-9.2 9.2.7.7 1.4 1.4.7.7Z"/>
+						<path d="M15 65v-4h32v4H15Z"/>
+						<path d="M79 61h32v3H79z"/>
+						<path d="M79 62h32v3H79z"/>
+						<path d="M61 79h3v21h-3z"/>
+						<path d="M62 79h3v21h-3z"/>
+						<path d="M61 26h3v21h-3z"/>
+						<path d="M62 26h3v21h-3z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_illumination_flare.svg" alt="Orbital Illumination Flare">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_laser</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99ZM78 69.6l.4-1.3A54 54 0 0 1 107.9 90H93.4A44.6 44.6 0 0 0 78 69.6Zm-29.8.5A45 45 0 0 0 33.6 90H18.1a54 54 0 0 1 29.5-21.7 16 16 0 0 0 .6 1.8ZM28.1 120H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27ZM63 174a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm33-54H65V93h26.5a85.5 85.5 0 0 1 4.6 27Zm-5.7-30H65V79.9a16 16 0 0 0 11.7-7.6c6.4 4.5 10.7 11 13.6 17.7ZM62 120H31a85.5 85.5 0 0 1 4.5-27H62v27ZM36.7 90a41 41 0 0 1 13-17.2A16 16 0 0 0 62 80v10H36.7Z">
+						</path>
+						<circle cx="63" cy="64" r="12"></circle>
+						<path d="M35 62h12v3H35zM79 62h12v3H79z"/>
+						<path d="m73.1 51.5 8.5-8.5 2.1 2.1-8.4 8.5Z"/>
+						<path d="M53 51.8 44.2 43 42 45.2l8.8 8.8Z"/>
+						<path d="M62 13h2v45h-2z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_laser.svg" alt="Orbital Laser">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_precision_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#planet"/>
+						<path d="M54 39V11H29l18 28h7ZM73 11h25L80 39h-7V11Z"/>
+						<path d="M59 11h9v33h9L64 64 50 44h9"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_precision_strike.svg" alt="Orbital Precision Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_railcannon_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#de7b6c"
+							d="M99 120a91 91 0 0 0-4.5-27h15.3a53.7 53.7 0 0 1 7.2 27H99ZM76 68.2v-.6A54 54 0 0 1 107.9 90H93.4A43.6 43.6 0 0 0 76 68.2Zm-25 0A43.5 43.5 0 0 0 33.6 90H18.1A54 54 0 0 1 51 67.4v.8ZM28 120H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27Zm35 54a53.7 53.7 0 0 1-32.6-11h65.2A53.7 53.7 0 0 1 63 174Zm33-54H65v-13.1l6-6.9v-7h20.5a85.5 85.5 0 0 1 4.6 27Zm-5.7-30H71v-5l5-4v-9.2A40.3 40.3 0 0 1 90.3 90ZM51 71.8V81l5 4v5H36.7c3-7 7.5-13.6 14.3-18.2ZM35.5 93H56v7l6 6.9V120H31a85.5 85.5 0 0 1 4.5-27Z">
+						</path>
+						<path d="M54 59h19v20l-5 4v16l-4.5 5-4.5-5V83l-5-4V59Z"/>
+						<path
+							d="M73 33h-4c0-3.9-2.5-7-5.5-7S58 29.1 58 33h-4c0-9.6 4-10 4-10s-4-4-4-12h4s.8 8 5 8h.6c4.4 0 5.2-8 5.2-8H73c0 8-4.2 12-4.2 12s4.2.4 4.2 10Zm0 0h-4c0 3.9-2.5 7-5.5 7S58 36.9 58 33h-4c0 9.6 4 10 4 10s-4 4-4 12h4s.8-8 5-8h.6c4.4 0 5.2 8 5.2 8H73c0-8-4.2-12-4.2-12s4.2-.4 4.2-10Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_railcannon_strike.svg" alt="Orbital Railcannon Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_smoke_strike</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#planet"/>
+						<path
+							d="M106 83S91.3 63.5 63 64c-28.4-.5-44 20-44 20s-5-15 1-22c7.3-8.6 19.2-5.1 21-5 3 .2 2-1 2-1s-2.8-3.6-7-3c-9.5 1.4-5-6-5-6 5.9-9.8 19.6-6 23.2-5.3 1.3.3.8-.7.8-.7s-5.9-2.3-6-5c-.4-9.7 14-8 14-8h.5c2.6-.1 13.8-.5 13.4 8.1 0 2.7-6 5-6 5s-.4 1 .9.7c3.5-.8 17.2-4.5 23 5.3 0 0 4.5 7.4-5 6-4.1-.7-6.9 3-6.9 3s-1 1.2 2 1c1.7-.2 13.6-3.6 20.9 5 5.9 6.9.2 20.9.2 20.9Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_smoke_strike.svg" alt="Orbital Smoke Strike">
+				</dd>
+			</div>
+
+			<div>
+				<dt>orbital_walking_barrage</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#planet"/>
+						<path
+							d="M62 14h3v50h-3zM71 14h3v3h-3zM71 24h3v3h-3zM71 33h3v3h-3zM71 42h3v3h-3zM71 51h3v3h-3zM71 60h3v3h-3z">
+						</path>
+						<path d="m49.6 58.3 4-.5.8 6-4 .4Z"/>
+						<path d="m39.1 60.8 3.8-1.3 2 5.7-3.8 1.3Z"/>
+						<path d="m28.7 66.6 3.3-2.2 3.3 5-3.3 2.2Z"/>
+						<path d="m20.5 73.1 3-2.7 4 4.5-3 2.7Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/orbital_walking_barrage.svg" alt="Orbital Walking Barrage">
+				</dd>
+			</div>
+
+			<div>
+				<dt>patriot_exosuit</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="M78 32h8l-8 7v-7"/>
+						<path d="M78 19h8l-8-7v7"/>
+						<path d="M114 30H78v-9h36s5 .5 5 4v1c0 3.5-5 4-5 4Z"/>
+						<path fill="#49adc9"
+							d="M81 103v4l6 6 1 1H65l1-1 6-6v-8l6-7V78h9v18Zm-7-16-6 7H58l-6-7V74H39V58l4-4h8l5-4h14l5 4h8l4 4v16H74v13Zm-4-29H56v12h14V58ZM48 92l6 7v8l6 6 1 1H38l1-1 6-6v-4l-6-7V78h9v14Z">
+						</path>
+						<path d="M8 37h26l2-2h7l6-3-6-3h-7l-2-2H8v10Z"/>
+						<path d="M8 23h26l2-2h7l6-3-6-3h-7l-2-2H8v10Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/patriot_exosuit.svg" alt="EXO-45 Patriot Exosuit">
+				</dd>
+			</div>
+
+			<div>
+				<dt>prospecting_drill</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<path
+							d="M36 50.8c.1-.5.6-1.8 3-1.8h20V14a1.9 1.9 0 0 1 1.8-2h4.4a1.9 1.9 0 0 1 1.8 2v35h20c3 0 3 2 3 2v3l-4.3 10.1Zm33.5 51-14.7-4-4.8-11 23.3 6.1ZM63 117l-6.2-14.5 11.1 3ZM48 82 43.2 71l35.5 9.5-3.8 8.8ZM36.5 55 84 67.9l-3.8 8.9-39-10.5Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/prospecting_drill.svg" alt="Prospecting Drill">
+				</dd>
+			</div>
+
+			<div>
+				<dt>railgun</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#49adc9"
+							d="M121 83v9H81v-2H70v2H49l-2 4h-8l-7 9h-3l-9-8h-8v-1H5V78h37v-1h4v1h5v-1h3v1h2v-1h2v1h2v-1h4v1h11v-1h46v4h-3v2h3Zm-87 8h-6v7h2l4-5v-2Zm11 1h-3v2h3v-2Z">
+						</path>
+						<path d="M62 50V31h24l4 3h15l8 7-8 6H90l-4 3H62Z"/>
+						<path
+							d="M35 31v4c-3.9 0-7 2.5-7 5.5s3.1 5.5 7 5.5v4c-9.6 0-10-4-10-4s-4 4-12 4v-4s8-.8 8-5v-.6c0-4.4-8-5.2-8-5.2V31c8 0 12 4.2 12 4.2s.4-4.2 10-4.2Zm0 0v4c3.9 0 7 2.5 7 5.5S38.9 46 35 46v4c9.6 0 10-4 10-4s4 4 12 4v-4s-8-.8-8-5v-.6c0-4.4 8-5.2 8-5.2V31c-8 0-12 4.2-12 4.2S44.6 31 35 31Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/railgun.svg" alt="RS-422 Railgun">
+				</dd>
+			</div>
+
+			<div>
+				<dt>recoilless_rifle</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill-rule="evenodd" fill="#49adc9"
+							d="M39 75v-2h50v2h32v15h-4v1h-10v-1H96v1h6v2h-8l-3 8H81v-5h-2l-7 10-4-4 7-10H50v17h-5V99l-4-5h-6l-1-2H24l-1-2h-3l-9 5H6l-2-2V74l2-2h5l9 3h19Zm43 18 2-2 4 4-2 2Z">
+						</path>
+						<path d="M79 50c-5.3 0-30-7-30-7H35l-4 9H17l5-12v-1l-5-12h14l4 9h14s24.7-7 30-7 28 7 28 7v7s-22.7 7-28 7Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/recoilless_rifle.svg" alt="GR-8 Recoilless Rifle">
+				</dd>
+			</div>
+
+			<div>
+				<dt>reinforce</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path d="M85 108H23l-8-9V89h17l10 9h24l10-9h17v10Z"/>
+						<path d="M54 94 31 77V57h4c0-18.7 19-19 19-19s19 .3 19 19h4v20Zm14-37H40v14h7l3-4h8l3 4h7V57Z"/>
+						<path d="M116 42H98v17h-5V42H76v-5h17V19h5v18h18v5Z"/>
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/reinforce.svg" alt="Reinforce">
+				</dd>
+			</div>
+
+			<div>
+				<dt>resupply</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M82 52V24h30L96.4 52H82Zm-50.4 0L16 24h30v28H31.6Zm44.7 36L64 110 51.7 88h24.6Z">
+						</path>
+						<path d="M34 84V56h9v10h10V56h9v28H34ZM66 84V56h9v10h10V56h9v28H66ZM50 52V24h9v10h10V24h9v28H50Z"/>
+						<path fill="#c9b269" d="M5 123v-20l20 20H5Zm118 0v-20l-20 20h20Zm0-118v20L103 5h20ZM5 5v20L25 5H5Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/resupply.svg" alt="Resupply">
+				</dd>
+			</div>
+
+			<div>
+				<dt>rocket_sentry</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#679552"
+							d="M90 33s-6-8.3-18-15h43v15H90Zm2 24v14H50.6l-.6-6 17-17V28H47L31 43.1V18h22s39 0 39 39Zm-7 35H41v-7l9-9h35v16Zm8 4 13 16H18l13-16h62Z">
+						</path>
+						<path d="M63 32v14L46 63v10L34 85V61H10l12-12h10l17-17h14Z"/>
+						<path d="M20 86v-9l6-6v10ZM24 69l-6 5H9l5-5h10Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/rocket_sentry.svg" alt="A/MLS-4X Rocket Sentry">
+				</dd>
+			</div>
+
+			<div>
+				<dt>seaf_artillery</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#c9b269">
+							<path
+								d="M100.7 119H99a91 91 0 0 0-4.4-27h15.3a53.8 53.8 0 0 1 5.3 12.7ZM74.2 66.2A54 54 0 0 1 107.9 89H93.4c-5.3-13-13-19.5-19.2-22.8ZM90.3 89H65V66a37 37 0 0 1 25.3 23Zm-54.8 3H62v27H31a85.5 85.5 0 0 1 4.5-27ZM62 66v23H36.7A37 37 0 0 1 62 66ZM33.6 89H18.1a54 54 0 0 1 35.3-23.1A42.4 42.4 0 0 0 33.6 89Zm-1 3c-2.5 7.1-4.2 16-4.5 27h-3L11 104.7A53.8 53.8 0 0 1 16.2 92h16.3ZM65 92h26.5a85.5 85.5 0 0 1 4.6 27H65V92Z">
+							</path>
+							<path d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						</g>
+						<path d="M54 38V10H29l18 28h7ZM73 10h25L80 38h-7V10Z"/>
+						<path d="M59 10h9v33h9L64 63 50 43h9"/>
+					</svg>
+					<img width="64" height="64" src="./icons/seaf_artillery.svg" alt="SEAF Artillery">
+				</dd>
+			</div>
+
+			<div>
+				<dt>seismic_probe</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<path
+							d="m73.9 81.2-9-9h-1.5l-29.6 29.6s-2.3 2-5.7-1.3v-.1c0-.1 0 0-.1 0-3.3-3.5-1.4-5.7-1.4-5.7L56.3 65v-1.4l-9.1-9.2-.1-2.9L64.8 34h2.8l9.9 9.9 2.1-2.2c1.8-1.7 5.1 2.3 5.1 2.3.7.6 3.6 3.4 2 5l-2 2 9.8 9.9v2.8L76.7 81.3Z">
+						</path>
+						<path
+							d="m54.9 38.5-2.2 2.1L44 49s-1.4 1.4-4-1.3c0 0-2-2.5-1-3.7 2-2.2 6.3-7.3 8-9l2.2-2.1c1.8-1.8 6.5-6 8.8-7.9 1.6-1.3 4 .8 4 .8 2.6 2.8 1 4.2 1 4.2Z">
+						</path>
+						<path
+							d="m94.9 79.5-2.2 2.1L84 90s-1.4 1.4-4-1.3c0 0-2-2.5-1-3.7 2-2.2 6.3-7.3 8-9l2.2-2.1c1.8-1.8 6.5-6 8.8-7.9 1.6-1.3 4 .8 4 .8 2.6 2.8 1 4.2 1 4.2Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/seismic_probe.svg" alt="Seismic Probe">
+				</dd>
+			</div>
+
+			<div>
+				<dt>shield_generator_pack</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#49adc9">
+							<path d="M79 41h9v10h-9z"/>
+							<path d="M75 41H64l-10-9v14l11 4v48h39l9-9V32l-10 9H92v14H75V41Z"/>
+							<path d="m54 27 11 10h37l11-10V16H54v11Z"/>
+						</g>
+						<path d="M8 99s24 16 26 16 26-16 26-16V53s-22-6-26-6-26 6-26 6v46Zm15-18 15-21-5 17h12L30 97l5-16H23Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/shield_generator_pack.svg" alt="SH-32 Shield Generator Pack">
+				</dd>
+			</div>
+
+			<div>
+				<dt>shield_generator_relay</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#terrain"/>
+						<path d="M37 75s24 16 26 16 26-16 26-16V29s-22-6-26-6-26 6-26 6v46Zm15-18 15-21-5 17h12L59 73l5-16H52Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/shield_generator_relay.svg" alt="FX-12 Shield Generator Relay">
+				</dd>
+			</div>
+
+			<div>
+				<dt>sos_beacon</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<g fill="#c9b269">
+							<path d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+							<path
+								d="M63 48s-9.2.5-14 6c0 0-2.5 1.5-4 0s0-4 0-4a27.8 27.8 0 0 1 18-7v5Zm0 0s9.4.7 14.3 6.3c0 0 2.5 1.5 4 0s0-4 0-4A28.2 28.2 0 0 0 63 43v5Z">
+							</path>
+							<path
+								d="M63 39s13.1.4 18 6c0 0 4.8 3.8 6.3 2.3.6-.6 1.8-1.8.7-3.3-1.6-2.3-6-5-6-5a39 39 0 0 0-19-5v5Zm0 0s-12.9.5-17.7 6.3c0 0-4.7 4-6.2 2.4-.6-.7-1.7-1.9-.7-3.4 1.6-2.4 6-5.2 6-5.2A37.2 37.2 0 0 1 63 34v5Z">
+							</path>
+							<path
+								d="M63 30s-18.2 2.2-23 8c0 0-4.4 4.5-7 3-.7-.4-1-2.4 0-4 1.6-2.3 9-7 9-7s10.2-5 21-5v5Zm0 0s18.4 2 23.2 7.8c0 0 4.5 4.3 7.1 2.9.8-.4 1.1-2.4 0-4-1.6-2.2-9-6.8-9-6.8S73.8 25 63 25v5Z">
+							</path>
+						</g>
+						<path
+							d="M39 70c-.2-3.3-.2-3.9-1-5s-2 0-2 0c-3.1 4.5 4 8 4 8a19.7 19.7 0 0 1 5 4c5 4.8 4 10 4 10s1.6 11-11 11-12-10-12-10v-5h9a15 15 0 0 0 2 7c.8 1.1 2 0 2 0 3-4.5-4-8-4-8a19.6 19.6 0 0 1-5-4c-5-4.8-4-10-4-10s-1.7-11 11-11 11 13 11 13h-9Z">
+						</path>
+						<path
+							d="M63 98s-12 .6-12-17v-6c0-19.7 12-18 12-18s12-2 12 18v6c0 17.6-12 17-12 17Zm2-21v-9s0-4-2-4-2 4-2 4v19s0 4 2 4 2-4 2-4V77Z">
+						</path>
+						<path
+							d="M90 70c-.2-3.3-.2-3.9-1-5s-2 0-2 0c-3.1 4.5 4 8 4 8a19.7 19.7 0 0 1 5 4c5 4.8 4 10 4 10s1.6 11-11 11-12-10-12-10v-5h9a15 15 0 0 0 2 7c.8 1.1 2 0 2 0 3-4.5-4-8-4-8a19.6 19.6 0 0 1-5-4c-5-4.8-4-10-4-10s-1.7-11 11-11 11 13 11 13h-9Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/sos_beacon.svg" alt="SOS Beacon">
+				</dd>
+			</div>
+
+			<div>
+				<dt>spear</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill-rule="evenodd"
+							d="M24 26h15L24 13v13ZM24 53h15L24 66V53ZM24 30h73s9 1 9 10-9 9-9 9H24V30Zm71.5 4a5.5 5.5 0 1 1-5.5 5.5 5.5 5.5 0 0 1 5.5-5.5Z">
+						</path>
+						<path fill="#49adc9"
+							d="m110 95-3 3h-9l-4 11h-3l-3-3h-3v3h-6l-6-3h-1l-9 9h-4L48 98H34l-3-3H14V84h19v-3h7v-3h42v-2h24v2h1v4h5v13h-2Zm-49 5v8l8-8h-8Zm20 3h-5v3l5 1v-4Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/spear.svg" alt="FAF-14 SPEAR Launcher">
+				</dd>
+			</div>
+
+			<div>
+				<dt>sssd_delivery</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<path d="M9 78v10l10 10h88l10-10V78H73v14H53V78H9ZM26 74V28h74v46H26Zm37-40L41 57h12v14h20V57h12Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/upload_data.svg" alt="SSSD Delivery">
+				</dd>
+			</div>
+
+			<div>
+				<dt>stalwart</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill-rule="evenodd" fill="#49adc9"
+							d="m80 81 3 3h30l2 2h3v1h3v1h-3l-1 1v1h2v1h-4l-3 5h-3v-1h-2v1H94v-1h-2v1h-2v-1l-2-1-3 3h-8v-6H65v6h-8l-3 3h-7s-3.9 5.6-3 8c1 2.8-2 3-2 3l-5-3s-.8-2.8 0-4c.7-1.1 6-6 6-6v-4h-7l-1-1h-8l-4 4H10l-2 2H6l-1-1V83l1-1h30l7-1v-1h4v1h2v-1h2v1h1v-1h6v1h3v-1h1v1h2v-1h1v1h15ZM49 94h6v2l-2 2h-4v-4Z">
+						</path>
+						<path d="M45 62h26l2-2h8l5-2.5-5-2.5h-8l-2-2H45v9Z"/>
+						<path d="M45 48h26l2-2h8l5-2.5-5-2.5h-8l-2-2H45v9Z"/>
+						<path d="M45 34h26l2-2h8l5-2.5-5-2.5h-8l-2-2H45v9Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/stalwart.svg" alt="M-105 Stalwart">
+				</dd>
+			</div>
+
+			<div>
+				<dt>super_earth_flag</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<path
+							d="m26 102 27-34 10 11 9-1 22 24H26ZM42 76l8-9s-6.5-27.3-6-39h-8s-.8 33.6 6 48ZM47 28s2.8-.5 4-2 10.3-5.2 15 0 13-2 13-2l6-3s3.4-.9 2 7 1 13 1 13 3.7 7.1 1 8c-3 1-3.8 2.5-5 3a21.8 21.8 0 0 1-11 1s-4.2-2-6-3c-2.6-1.5-8.6.6-10 2s-4.7 5-6 2-2.4-7.7-4-26Z">
+						</path>
+					</svg>
+					<img width="64" height="64" src="./icons/super_earth_flag.svg" alt="Super Earth Flag">
+				</dd>
+			</div>
+
+			<div>
+				<dt>supply_pack</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<defs>
+							<path id="supply_pack_contents" fill-rule="evenodd" d="M7 59h17v19h20V59h17v54H7V59Zm7 29h19v2a1 1 0 0 0 1 1h14s6 2.4 6 4.6-6 4.4-6 4.4H34a1 1 0 0 0-1 1v2H14V88Z"/>
+							<mask id="mask_supply_pack_contents">
+								<use href="#mask_fill"/>
+								<use href="#supply_pack_contents" class="mask_outline"/>
+							</mask>
+						</defs>
+						<use href="#backpack" mask="url(#mask_supply_pack_contents)"/>
+						<use href="#supply_pack_contents"/>
+					</svg>
+					<img width="64" height="64" src="./icons/supply_pack.svg" alt="B-1 Supply Pack">
+				</dd>
+			</div>
+
+			<div>
+				<dt>tesla_tower</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<use href="#terrain"/>
+						<path d="m33 94 9 5 21-10 21 10 9-5-8-11V43h-7v31H68V64l-3-3V51h-4v10l-3 3v10H48V43h-7v40Z"/>
+						<path d="M72 27 57 47l5-16H50l15-21-5 17h12Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/tesla_tower.svg" alt="A/ARC-3 Tesla Tower">
+				</dd>
+			</div>
+
+			<div>
+				<dt>upload_data</dt>
+				<dd>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
+						<path fill="#c9b269" d="M4 122v-20l20 20H4Zm118 0v-20l-20 20h20Zm0-118v20L102 4h20ZM4 4v20L24 4H4Z"/>
+						<path d="M9 78v10l10 10h88l10-10V78H73v14H53V78H9ZM26 74V28h74v46H26Zm37-40L41 57h12v14h20V57h12Z"/>
+					</svg>
+					<img width="64" height="64" src="./icons/upload_data.svg" alt="Upload Data">
+				</dd>
+			</div>
+
+	</dl>
 </aside>
+<!-- <script defer type="module" src="./mjs/generate_sprite.mjs"></script> -->
 <script defer type="module" src="./mjs/wc/load-file.mjs"></script>

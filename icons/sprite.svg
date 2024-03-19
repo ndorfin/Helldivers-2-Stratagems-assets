@@ -1,8 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" fill="#fff">
-	<defs>
-		<path id="terrain" fill="#679552" d="M-9 140v-39l9 2v23h126v-22.7l4 1.7 3 35H-9Zm130-19H5v-20l17-7 20 10 21-10 21 10 20-10 17 7.2V121Z"/>
-	</defs>
-	<use href="#terrain"/>
-	<path d="m33 94 9 5 21-10 21 10 9-5-8-11V43h-7v31H68V64l-3-3V51h-4v10l-3 3v10H48V43h-7v40Z"/>
-	<path d="M72 27 57 47l5-16H50l15-21-5 17h12Z"/>
+	<!-- Mask attributes -->
+	<rect id="mask_fill" x="0" y="0" width="100%" height="100%" fill="#fff"/>
+	
+	<!-- Commonly-used elements -->
+	<path id="terrain" fill="#679552" d="M-9 140v-39l9 2v23h126v-22.7l4 1.7 3 35H-9Zm130-19H5v-20l17-7 20 10 21-10 21 10 20-10 17 7.2V121Z"/>
+	<path id="mgr" d="M39 28v12h27.3l1-1.7h9l1.2-1.7h3.4L83 34l-2.1-2.6h-3.4l-1.1-1.7h-9L66.2 28H39Z"/>
+	<path id="planet" fill="#de7b6c" d="M94.5 93h15.3a53.7 53.7 0 0 1 7.2 27H99c-.4-11-2-19.9-4.5-27ZM74.2 67.2A54 54 0 0 1 107.9 90H93.4c-5.3-13-13-19.5-19.2-22.8ZM90.3 90H65V67a37 37 0 0 1 25.3 23Zm-54.8 3H62v27H31a85.5 85.5 0 0 1 4.5-27ZM62 67v23H36.7A37 37 0 0 1 62 67ZM33.6 90H18.1a54 54 0 0 1 35.3-23.1A42.4 42.4 0 0 0 33.6 90Zm-5.5 30H9a53.7 53.7 0 0 1 7.2-27h16.3c-2.4 7.1-4.1 16-4.4 27Zm67.5 43a54 54 0 0 1-65.2 0h65.2Zm-4-70a85.5 85.5 0 0 1 4.5 27H65V93h26.5Z"/>
+	<g id="backpack" fill="#49adc9">
+		<path d="M79 41H88V51H79V41Z"/>
+		<path d="M75 41H63L54 32V55V89L63 98H104L113 89V32L104 41H92V55H75V41Z"/>
+		<path d="M54 27L65 37H102L113 27V16H54V27Z"/>
+	</g>
+	<path id="sentry" fill="#679552" d="M90 33C90 33 84 24.7 72 18H115V33H90ZM92 57V71H31V18H53C53 18 92 18 92 57ZM85 76V92H41V76H85ZM93 96L106 112H18L31 96H93Z"/>
+	
+	<!-- Contents for masking -->
+	<path id="guard_dog_contents" fill-rule="evenodd" d="M20 114 9 98V65l11-16v8h7l4-14h10l4 14h7v-8l11 16v33l-11 16v-8h-7l-4 14H31l-4-14h-7v8Zm1-50h13a1 1 0 0 0 1 1h12s5 2 5 3-5 3-5 3H35a1 1 0 0 0-1 1H21v-8Zm0 13h13a1 1 0 0 0 1 1h12s5 2 5 3-5 3-5 3H35a1 1 0 0 0-1 1H21v-8Zm0 13h13a1 1 0 0 0 1 1h12s5 2 5 3-5 3-5 3H35a1 1 0 0 0-1 1H21v-8Z"/>
+	<path id="guard_dog_rover_contents" fill-rule="evenodd" d="M20 114 9 98V65l11-16v8h7l4-14h10l4 14h7v-8l11 16v33l-11 16v-8h-7l-4 14H31l-4-14h-7v8Zm27-30ZM36 74a8 8 0 1 1-7.7 6 8 8 0 0 1 7.7-6ZM9 80h19v4H9v-4Zm25-8v-8h4v8h-4Zm20 12h-8v-4h8v4Zm-20 16v-8h4v8h-4ZM21 70l3-3 6 6-3 3Zm27-3 3 3-6 6-3-3ZM21 94l3 3 6-6-3-3Zm27 3 3-3-6-6-3 3Z"/>
+	<g id="hmg_emplacement_contents" fill="#fff">
+		<use href="#mgr"/>
+		<use href="#mgr" transform="translate(0 18)"/>
+		<circle cx="18" cy="24" r="9"/>
+		<path d="M5 34v40h5v37h16V74h5V34H5Z"/>
+	</g>
 </svg>
