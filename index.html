@@ -26,13 +26,6 @@
 		padding-inline-start: 0;
 	}
 
-	section li {
-		display: flex;
-		flex-direction: row;
-		gap: 1rem;
-		align-items: center;
-	}
-
 	section li + li {
 		margin-block-start: 1rem;
 	}
@@ -61,7 +54,6 @@
 				sectionIconList += `
 					<li>
 						<img width="126" height="126" src="./${groupItem.foldername}/${iconItem.filename}.svg" alt="${iconItem.label}">
-						<img width="126" height="126" src="https://raw.githubusercontent.com/nvigneux/Helldivers-2-Stratagems-icons-svg/master/${groupItem.foldername}/${iconItem.filename}.svg" alt="${iconItem.label}">
 					</li>
 				`;
 			});
