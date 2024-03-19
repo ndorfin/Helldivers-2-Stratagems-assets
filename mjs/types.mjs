@@ -5,6 +5,9 @@ export const TYPES = {
 	eagle: {
 		label: 'Eagle',
 	},
+	general: {
+		label: 'Always available',
+	},
 	mines: {
 		label: 'Mines',
 	},
