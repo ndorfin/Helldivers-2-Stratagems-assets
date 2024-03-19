@@ -234,10 +234,10 @@ export const ICONS = [
 		filename: 'orbital_gatling_barrage',
 	},
 	{
-		id: 'obital_laser',
+		id: 'orbital_laser',
 		label: 'Orbital Laser',
 		group_id: 'orbital_cannons',
-		filename: 'obital_laser',
+		filename: 'orbital_laser',
 	},
 	{
 		id: 'orbital_railcannon_strike',

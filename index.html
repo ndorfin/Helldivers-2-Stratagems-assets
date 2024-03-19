@@ -21,12 +21,11 @@
 		margin-block-start: 2rem;
 	}
 
-	section > ul {
-		list-style-type: '';
+	section > dl {
 		padding-inline-start: 0;
 	}
 
-	section li + li {
+	section > dl > div {
 		margin-block-start: 1rem;
 	}
 
@@ -36,7 +35,7 @@
 </style>
 <main>
 	<header>
-		<h1>List of icons</h1>
+		<h1>List of Stratagems</h1>
 	</header>
 </main>
 <script type="module">
@@ -52,9 +51,26 @@
 			})
 			.forEach(iconItem => {
 				sectionIconList += `
-					<li>
-						<img width="126" height="126" src="./icons/${groupItem.foldername}/${iconItem.filename}.svg" alt="${iconItem.label}">
-					</li>
+					<div>
+						<dt>
+							<code>id</code>
+						</dt>
+						<dd>
+							<code>${iconItem.id}</code>
+						</dd>
+						<dt>
+							<code>label</code>
+						</dt>
+						<dd>
+							${iconItem.label}
+						</dd>
+						<dt>
+							<code>icon</code>
+						</dt>
+						<dd>
+							<img width="126" height="126" src="./icons/${groupItem.foldername}/${iconItem.filename}.svg" alt="${iconItem.label}">
+						</dd>
+					</div>
 				`;
 			});
 
@@ -63,9 +79,9 @@
 				<header>
 					<h2 id="section_heading_${groupItem.id}">${groupItem.label}</h2>
 				</header>
-				<ul>
+				<dl>
 					${ sectionIconList }
-				</ul>
+				</dl>
 			</section>
 		`;
 		document.querySelector('main').innerHTML += section;
