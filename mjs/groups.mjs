@@ -2,36 +2,36 @@ export const GROUPS = [
 	{
 		id: 'bridge',
 		label: 'Bridge',
-		foldername: 'Bridge',
+		foldername: 'bridge',
 	},
 	{
 		id: 'engineering_bay',
 		label: 'Engineering Bay',
-		foldername: 'Engineering Bay',
+		foldername: 'engineering_bay',
 	},
 	{
 		id: 'general_stratagems',
 		label: 'General Stratagems',
-		foldername: 'General Stratagems',
+		foldername: 'general_stratagems',
 	},
 	{
 		id: 'hangar',
 		label: 'Hangar',
-		foldername: 'Hangar',
+		foldername: 'hangar',
 	},
 	{
 		id: 'orbital_cannons',
 		label: 'Orbital Cannons',
-		foldername: 'Orbital Cannons',
+		foldername: 'orbital_cannons',
 	},
 	{
 		id: 'patriotic_administration_center',
 		label: 'Patriotic Administration Center',
-		foldername: 'Patriotic Administration Center',
+		foldername: 'patriotic_administration_center',
 	},
 	{
 		id: 'robotics_workshop',
 		label: 'Robotics Workshop',
-		foldername: 'Robotics Workshop',
+		foldername: 'robotics_workshop',
 	},
 ];
