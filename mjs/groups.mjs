@@ -1,5 +1,10 @@
 export const GROUPS = [
 	{
+		id: 'general_stratagems',
+		label: 'General Stratagems',
+		foldername: 'general_stratagems',
+	},
+	{
 		id: 'bridge',
 		label: 'Bridge',
 		foldername: 'bridge',
@@ -8,11 +13,6 @@ export const GROUPS = [
 		id: 'engineering_bay',
 		label: 'Engineering Bay',
 		foldername: 'engineering_bay',
-	},
-	{
-		id: 'general_stratagems',
-		label: 'General Stratagems',
-		foldername: 'general_stratagems',
 	},
 	{
 		id: 'hangar',
