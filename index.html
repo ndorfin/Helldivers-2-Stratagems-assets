@@ -42,6 +42,7 @@
 
 	thead th {
 		border-block-end: 2px solid hsla(0,0%,0%,0.2);
+		vertical-align: bottom;
 	}
 
 	tbody tr:nth-child(odd) {
@@ -56,12 +57,14 @@
 <main>
 	<header>
 		<h1>List of Stratagems</h1>
-		<p>Sorted by <code>id</code></p>
+		<p>Sorted by ID</p>
 	</header>
 </main>
 <script type="module">
 	import { GROUPS } from './mjs/groups.mjs';
 	import { STRATAGEMS } from './mjs/stratagems.mjs';
+	import { CURRENCIES } from './mjs/currencies.mjs';
+	import { TYPES } from './mjs/types.mjs';
 
 	let sectionAllList = '';
 	let listOfGroupDetails = '';
@@ -74,30 +77,30 @@
 			sectionAllList += `
 				<tr>
 					<td headers="all_header_icon row_all_${ iconItem.id }">
-						<img width="64" height="64" src="./icons/${iconItem.group_id}/${iconItem.filename}.svg" alt="${iconItem.label}">
+						<img width="64" height="64" src="./icons/${GROUPS[iconItem.group_id].foldername}/${iconItem.filename}.svg" alt="${iconItem.label}">
 					</td>
 					<th headers="all_header_id" id="row_all_${ iconItem.id }" scope="row">
 						<code>${iconItem.id}</code><br>
 						${iconItem.label}
 					</th>
+					<td headers="all_header_attributes row_all_${ iconItem.id }">
+						${TYPES[iconItem.type].label}<br>
+						${GROUPS[iconItem.group_id].label}
+					</td>
 					<td headers="all_header_uses row_all_${ iconItem.id }" class="amount">
-						${ (iconItem.uses > -1) ? iconItem.uses : '<span class="not_applicable">Unlimited</span>'}
+						${ (iconItem.uses > -1) ? iconItem.uses : '<span class="not_applicable">∞</span>'}
 					</td>
 					<td headers="all_header_cooldown row_all_${ iconItem.id }" class="amount">
-						${ (iconItem.cooldown > 0) ? iconItem.cooldown + 's' : '<span class="not_applicable">N/A</span>'}
+						${ (iconItem.cooldown > 0) ? iconItem.cooldown + '<abbr title="Seconds">s</abbr>' : '<span class="not_applicable">N/A</span>'}
 					</td>
 					<td headers="all_header_call_in_time row_all_${ iconItem.id }" class="amount">
-						${ (iconItem.call_in_time) ? iconItem.call_in_time + 's' : '<span class="not_applicable">N/A</span>'}
+						${ (iconItem.call_in_time) ? iconItem.call_in_time + '<abbr title="Seconds">s</abbr>' : '<span class="not_applicable">N/A</span>'}
 					</td>
 					<td headers="all_header_level_required row_all_${ iconItem.id }" class="amount">
 						${ (iconItem.level_required) ? iconItem.level_required : '<span class="not_applicable">N/A</span>'}
 					</td>
 					<td headers="all_header_cost row_all_${ iconItem.id }" class="amount">
-						${ (iconItem.currency_amount) ? iconItem.currency_amount + 'R' : '<span class="not_applicable">Free</span>'}
-					</td>
-					<td headers="all_header_attributes row_all_${ iconItem.id }">
-						<code>${iconItem.group_id}</code><br>
-						<code>${iconItem.type}</code>
+						${ (iconItem.currency_amount) ? iconItem.currency_amount.toLocaleString() + '<abbr title="Requisition slips">R</abbr>' : '<span class="not_applicable">Free</span>'}
 					</td>
 				</tr>
 			`;
@@ -107,14 +110,14 @@
 		<table>
 			<thead>
 				<tr>
-					<th scope="col" id="all_header_icon"><code>icon</code></th>
-					<th scope="col" id="all_header_id"><code>id</code>, <code>label</code></th>
-					<th scope="col" id="all_header_uses"><code>uses</code></th>
-					<th scope="col" id="all_header_cooldown"><code>cooldown</code></th>
-					<th scope="col" id="all_header_call_in_time"><code>call_in_time</code></th>
-					<th scope="col" id="all_header_level_required"><code>level_required</code></th>
-					<th scope="col" id="all_header_cost"><code>currency_amount</code></th>
-					<th scope="col" id="all_header_attributes"><code>grpup_id</code>, <code>type</code></th>
+					<th scope="col" id="all_header_icon">Icon</th>
+					<th scope="col" id="all_header_id">ID<br>Label</th>
+					<th scope="col" id="all_header_attributes">Type<br>Group</th>
+					<th scope="col" id="all_header_uses" class="amount">Uses</th>
+					<th scope="col" id="all_header_cooldown" class="amount">Cooldown</th>
+					<th scope="col" id="all_header_call_in_time" class="amount">Call-in<br>delay</th>
+					<th scope="col" id="all_header_level_required" class="amount">Level<br>required</th>
+					<th scope="col" id="all_header_cost" class="amount">Cost</th>
 				</tr>
 			</thead>
 			<tbody>

@@ -1,37 +1,30 @@
-export const GROUPS = [
-	{
-		id: 'general_stratagems',
+export const GROUPS = {
+	general_stratagems: {
 		label: 'General Stratagems',
 		foldername: 'general_stratagems',
 	},
-	{
-		id: 'bridge',
+	bridge: {
 		label: 'Bridge',
 		foldername: 'bridge',
 	},
-	{
-		id: 'engineering_bay',
+	engineering_bay: {
 		label: 'Engineering Bay',
 		foldername: 'engineering_bay',
 	},
-	{
-		id: 'hangar',
+	hangar: {
 		label: 'Hangar',
 		foldername: 'hangar',
 	},
-	{
-		id: 'orbital_cannons',
+	orbital_cannons: {
 		label: 'Orbital Cannons',
 		foldername: 'orbital_cannons',
 	},
-	{
-		id: 'patriotic_administration_center',
+	patriotic_administration_center: {
 		label: 'Patriotic Administration Center',
 		foldername: 'patriotic_administration_center',
 	},
-	{
-		id: 'robotics_workshop',
+	robotics_workshop: {
 		label: 'Robotics Workshop',
 		foldername: 'robotics_workshop',
 	},
-];
+};

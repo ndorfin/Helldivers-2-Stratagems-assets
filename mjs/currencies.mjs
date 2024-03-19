@@ -1,32 +1,26 @@
-export const CURRENCIES = [
-	{
-		id: 'requisition_slips',
+export const CURRENCIES = {
+	requisition_slips: {
 		label: 'Requisition slips',
 		abbr: 'R',
 	},
-	{
-		id: 'medals',
+	medals: {
 		label: 'Medals',
 		abbr: 'M',
 	},
-	{
-		id: 'super_credits',
+	super_credits: {
 		label: 'Super Credits',
 		abbr: 'SC',
 	},
-	{
-		id: 'common_samples',
+	common_samples: {
 		label: 'Common Samples',
 		abbr: 'CS',
 	},
-	{
-		id: 'rare_samples',
+	rare_samples: {
 		label: 'Rare Samples',
 		abbr: 'RS',
 	},
-	{
-		id: 'super_samples',
+	super_samples: {
 		label: 'Super Samples',
 		abbr: 'SS',
 	},
-]
+}
